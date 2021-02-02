@@ -16,6 +16,10 @@ class inputSanitizer
     {
         return trim($input);
     }
+    public static function sanitizeAllSpaces($input)
+    {
+         return inputSanitizer::sanitizeSpaces(preg_replace('/\s/', "", $input));
+    }
     public static function sanitizeNumbers($input)
     {
         return inputSanitizer::sanitizeSpaces(preg_replace('/[0-9]/', "", $input));
