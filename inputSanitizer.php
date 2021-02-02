@@ -50,7 +50,7 @@ class inputSanitizer
     }
     public static function sanitizeXSS($input)
     {
-        return inputSanitizer::sanitizeSpaces(preg_replace("/[{<>}]/","",$input));
+        return inputSanitizer::sanitizeSpaces(preg_replace("/^[on]+[a-z]+/gm","",$input));
     }
     public static function sanitizeEmail($input)
     {
