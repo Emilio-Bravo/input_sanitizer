@@ -40,7 +40,7 @@ class inputSanitizer
     {
         return inputSanitizer::sanitizeSpaces(preg_replace('/\d/',"",$input));
     }
-    public function sanitizeImpurities($input)
+    public static function sanitizeImpurities($input)
     {
         return inputSanitizer::sanitizeSpaces(preg_replace('/\W/',"",$input));
     }
