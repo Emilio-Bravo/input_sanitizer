@@ -52,4 +52,8 @@ class inputSanitizer
     {
         return inputSanitizer::sanitizeSpaces(preg_replace("/[{<>}]/","",$input));
     }
+    public static function sanitizeEmail($input)
+    {
+        return inputSanitizer::sanitizeSpaces(preg_replace("/\b[A-Za-z0-9._%@+-]+@[a-zA-z0-9]+\.[a-zA-Z]{2,6}\b/","",$input));
+    }
 }
