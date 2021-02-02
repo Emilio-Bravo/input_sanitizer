@@ -48,7 +48,7 @@ class inputSanitizer
     {
         return inputSanitizer::sanitizeSpaces(preg_replace("/[A-Z]/","",$input));
     }
-    public static function sanitizeLoweCase($input)
+    public static function sanitizeLowerCase($input)
     {
         return inputSanitizer::sanitizeSpaces(preg_replace("/[a-z]/","",$input));
     }
